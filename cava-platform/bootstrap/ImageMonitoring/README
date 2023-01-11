@@ -1,0 +1,209 @@
+--- TERMINOLOGY ---
+	- "header" -> The 10 options at the top left of the ghidra window -- file, edit, analysis, etc
+	- "menu" -> When you click on a header item, a drop down appears. This is a menu. I refer to each item in the menu as a "drop down item".
+	- "sub-menu" -> Some menu items in the drop down have further items you can click. Those are in a "sub-menu"
+	- "window" -> This is something the user interacts with in the ghidra GUI. The "Decompile Window", "Function Graph Window" are examples.
+
+--- High Level Overview ---
+
+The goal for this software is to externally instrument actions taken in ghidra and associate them with known items in ghidra.
+To accomplish this I used the libraries: opencv, numpy, pools, pynput
+	- opencv: https://opencv.org/
+		- For opencv, numpy, and pools, I have written great articles on the gitlab wiki I recommend checking out!
+	- pynput: https://pynput.readthedocs.io/en/latest/mouse.html
+		- This works by reporting back all movements of the mouse and allowing me to execute my own code with it.
+	- Note: I have created posts on our gitlab exploring these libraries, please check them out for additional technical details.
+
+When the program starts it launches the primary action monitor and two threads. The first thread is for regularly updating 
+the coordinates of known "windows" inside of ghidra. The second is for logging actions and sending them with the lab streaming layer. The
+action monitor detects mouse movements, clicks, and scroll actions. When these actions occurr I have pre-computed coordinates and states
+that derive meaning from what happened with no additional run time required. These states are updated based on what action was performed
+and the next action is handled. 
+
+The code will identify the location of a header from previously taken screen shots. From these coordinates
+it is able to determine where all headers are, menus, and sub-menus will be should they be interacted with. These coordinates are saved
+and used for immediate knowledge when the user clicks if they are interacting with the ghidra headers or not.
+
+The code maintains a "focus" variable, this tells us if the user has clicked a header or not. If a header has been clicked, I "activate"
+the drop down boundaries for the menu and being to monitor them for clicks. The code further monitors specific boundaries within the menu
+where a sub-menu exists. If the mouse passes into a drop down item with a sub-menu, the sub-menu becomes active and we start monitoring the 
+sub-menu drop downs for clicks. The state of the sub-menu is monitored through a single class variable, it takes on the value of the drop
+down item in the menu that has a sub-menu when active, otherwise it is the empty string.
+
+All of the drop down items have been hand transcribed to dictionaries in python code so that they can be immediately accessed at no run time
+cost when clicked. Upon version change in ghidra we will be required to verify all of these drop down items are in the same order AND that
+all boundaries for the menu and sub-menu are the same widths. Developer note: The program "print_pixels.py" can help with figuring out how many
+pixels wide something is on the screen.
+
+The code also records the coordinates of all windows on a regular interval using openCV, numpy, and pools. The code also uses these
+coordinates to relay information on which window is clicked in, scrolled in, etc. We also record the mouse time spent in each window, as well
+as when it enters / exits different windows. More information on the structure of these logs below.
+
+When finding the locations of these windows on screen, the code uses previously taken screen shots and finds where they occur on the current screen.
+To save time the code uses a pool function which works the same way across all windows. We identify the unique icon in the top left of the window, this
+gets the upper y-coordinate and the left x-coordinate. We use pre-computed locations for the "X" symbol in the top right to find the right x-coordinate,
+and lastly the code checks a dynamic number of images for the bottom right corner. This bottom right corner yields the lower y-coordinate and produces the
+box that the window occupies. 
+
+The code takes the headers and windows into account when considering an action. Clicks are verified to be in a header drop down before so it does not
+register the action in the underlying window. Certain actions will cancel headers from being visible, those are taken into account as well to minimize
+false positives.
+
+For help with determining hot keys used, the logs will include which window is "in focus". "in focus" refers to the blue/purple bar at the top of a window,
+only one can be highlighted at a time. This is updated in real time as the user clicks across windows, and it will be reset to the empty string if the user
+closes a window that was in focus.
+
+--- logging structure ---
+There are currently 3 types of "events" that are logged. They are "CoordinateEvent", "WindowEvent", "HeaderEvent". I will be discussing their format
+to aid with parsing the log messages. These messages are sent to the "GhidraClickLogs.log" file.
+
+NOTE: These logs are subject to change and will be changed as we refine the grammar used in the CAVA project.
+
+== CoordinateEvent ==
+A dictionary is logged, key is "CoordinateEvent". Value is a dictionary.
+	- Inner dictionary has a key "Timestamp", the value is the time
+	- Inner dictionary has a key "Coordinates", the value is a dictionary
+		- This dictionary has key/value pairs of all coordinates of the windows in ghidra. The values are 2-d lists, the first entry is the top left and second is the bottom right coordinates.
+Example:
+{"CoordinateEvent": {"Timestamp": 1638812786.8099344, "Coordinates": {"DisplayListing": [[2310, 1701], [2945, 2315]], "SymbolTree": [[2039, 2033], [2299, 2346]], "TaskInstructions": [[2308, 2410], [2945, 2727]], "DataTypeManager": [[2036, 2363], [2299, 2720]], "Decompiler": [[2954, 1699], [3523, 2731]], "ProgramTrees": [[2037, 1698], [2299, 2025]], "FunctionGraph": [[3533, 1700], [4179, 2733]]}}}
+
+== WindowEvent ==
+A dictionary is logged, key is "WindowEvent". Value is a dictionary.
+	Inner dictionary has the keys:
+	- "Timestamp", the value is the time
+	- "EventType", the value is a string
+		-> This value can be "LeftClick", "RightClick", "MiddleClick", "MouseExit", "MouseEntry"
+	- "WindowName", This is the window that was interacted with. The value is a string with the name of the window.
+	- "SecondsInWindow", the value is a number
+		-> Mouse hover time is recorded in known windows. Only present when "EventType" value is "MouseExit"
+	- "FocusedWindow", value is a string of the window name that has a blue header. Could be the empty string.
+		-> Not guaranteed to have a value. It may have been closed or the user hasn't clicked on anything yet.
+
+A couple of examples:
+{"WindowEvent": {"Timestamp": 1638812801.3031058, "EventType": "LeftClick", "WindowName": "FunctionGraph", "SecondsInWindow": null, "FocusedWindow": "FunctionGraph"}}
+{"WindowEvent": {"Timestamp": 1638812806.4829764, "EventType": "MouseExit", "WindowName": "FunctionGraph", "SecondsInWindow": 25.102361917495728, "FocusedWindow": ""}}
+
+== HeaderEvent ==
+A dictionary is logged, key is "HeaderEvent". Value is a dictionary.
+
+ Inner dictionary has the keys:
+
+	- "Timestamp", the value is the time
+	- "InstrumentationType", The value is the string "External"
+	- "EventType", the value is a string, this value can be "LeftClick", "RightClick", "MiddleClick", "MouseEntry", "MouseExit". Ghidra lets you middle click headers ...!
+	- "MouseEntry" and "MouseExit" events happen for headers after clicking and then moving to other headers. Also happens for all drop down items and sub menu items when entering and exiting them.
+	- "Header", the value is a string, the header that was clicked or hovered.
+	- "MenuItem", value is a string or null. This is the drop down item that was clicked. This is the menu item that is clicked, could be null if just the header name was clicked or hovered.
+	- "SubMenuItem", value is a string or null. Some header drop downs have sub menus that you can click.
+	- "FocusedInWindow", value is a string of the window name that has a blue header. Could be the empty string. Not guaranteed to have a value. It may have been closed or the user hasn't clicked on anything yet.
+	- "SecondsInWindow", The number of seconds it was inside of the header, drop down item, or sub menu item.
+
+Important Parsing Note: You will always want to start by checking SubMenuItem and MenuItem. Checking these entries will tell you what was interacted with. If both are null then you know this was just an interaction with the header, however only checking the header value doesn't tell you the extent of what was hovered or clicked!
+
+A few examples:
+
+{"HeaderEvent": {"Timestamp": 1645555247.1090665, "InstrumentationType": "External", "EventType": "LeftClick", "Header": "analysis", "MenuItem": null, "SubMenuItem": null, "SecondsInWindow": null, "FocusedWindow": ""}}
+{"HeaderEvent": {"Timestamp": 1645553594.0555067, "InstrumentationType": "External", "EventType": "MouseEntry", "Header": "file", "MenuItem": "AddToProgram", "SubMenuItem": null, "SecondsInWindow": null, "FocusedWindow": ""}}
+{"HeaderEvent": {"Timestamp": 1645553607.1932542, "InstrumentationType": "External", "EventType": "MouseExit", "Header": "graph", "MenuItem": "GraphOutput", "SubMenuItem": "DefaultGraphDisplay", "SecondsInWindow": 0.1619363, "FocusedWindow": ""}}
+
+
+
+
+
+== ScrollEvent ==
+A dictionary is logged, the key is "ScrollEvent", the value is a dictionary.
+
+The inner dictionary has the following keys, who has the value of a single string corresponding to what happened.
+
+	- "Timestamp" - The time.
+	- "InstrumentationType" - This is always "External".
+	- "EventType" - This can be "ScrollDown" or "ScrollUp" based on which scroll action it was.
+	- "WindowName" - This is the window that the scroll action took place.
+	- "FocusedWindow" - Last window that was clicked in.
+
+Examples:
+{"ScrollEvent": {"Timestamp": 1643322587.0854485, "InstrumentationType": "External", "EventType": "ScrollDown", "WindowName": "DefinedStrings", "FocusedWindow": "DefinedStrings"}}
+{"ScrollEvent": {"Timestamp": 1643322596.6220567, "InstrumentationType": "External", "EventType": "ScrollUp", "WindowName": "Decompiler", "FocusedWindow": "Decompiler"}}
+
+
+--- Dependencies ---
+-> Before it will work on your machine, you will need to install these dependencies (at a minimum, i'm assuming pip3 installed already.. etc).
+pip3 install pynput
+pip3 install numpy
+pip3 install opencv-python
+pip3 install mss
+pip3 install pylsl
+sudo apt-get install libjpeg-dev zlib1g-dev
+pip3 install pillow
+
+sudo apt-get install tesseract-ocr libtesseract-dev libleptonica-dev pkg-config
+sudo pip3 install tesserocr
+
+
+-- When all these dependencies are installed you will get an error in pylsl. This PITA dependency error can easily be solved with these steps:
+-> Alternative to the steps below, I have included this .deb file in the repo in python-logging.
+1) Go to:
+https://github.com/sccn/liblsl/releases
+2) Download the file:
+liblsl-1.15.2-bionic_amd64.deb
+3) Go to the directory where the file is and run the command:
+sudo apt-get install ./liblsl-1.15.2-bionic_amd64.deb
+
+--- Running the program ---
+
+NOTE: This is going to change in the coming months. 
+- Install all dependencies above before even bothering with what is below.
+- Navigate to: .../cava-core/python_logging
+		- your path may vary. Run this program on local host, run ghidra in vagrant.
+		-> Read "important notes" below, then execute "python3 ghidra_header_event.py"
+	- Important notes:
+		1) Start up vagrant and start a cava-ghidra instance through eclipse. Start it as such:
+				- right click CavaPlatformTesting -> run as -> ghidra
+				- open binary of your choice
+				- file -> configure -> "experiment" configure -> Select::: 
+						1) CavaCodeBrowserPlugin
+						2) CavaDecompilePlugin
+						3) CavaListenerPlugin
+				(back on configure screen)	-> "Ghidra Co.." configure -> DE-Select:
+						1) CodeBrowserPlugin
+
+		2) Now that vagrant with ghidra is running, start "ghidra_header_event.py".
+			-> If "Window" isn't showing in the header, it won't find the headers/menus. Currently there is a print when it fails
+			   to find the "Window", and it tried again every 10 seconds.
+
+			-> You can use a vanilla ghidra installation or Cava for testing this script. If you're using cava, make sure you're using 
+			   the most up-to-date master branch with the header bug fixes implemented.
+
+			-> Logs are sent to: python_logging/Ghidra_Click_Logs.log. There are still some print statements in the code as well.. for now.
+
+-- RAM requirements --
+Initial testing shows this takes ~500MB of RAM to search for sub images with pools. Make sure you have at least that much overhead while running
+the program. The Vagrant VMs are set up with 8GB of RAM, which is plenty.
+
+------------ Demo Notes --------------
+
+
+Three types of events are logged:
+
+Coordinate Event | Window Event | Header Event
+
+Coordinate Event:
+	0) Depending on the pixel count in the monitor, this will change the frequency we refresh the coordinates.
+	1) Checks for unique top left, "X" mark, then non-unique bottom right
+	2) Show: 
+		- Changing window size
+		- hiding windows behind drop downs
+		- time.time() and ghidra time from image recognition in the task instructions.
+
+Window Event:
+-> These include interactions with a specific window.
+	- left click, right click, middle click
+	- scrolling events are logged with the window the scroll took place in.
+	- Mouse entry / exit (time spent in window)
+	- "WindowInFocus" - left click around
+
+Header Events:
+-> These include interactions with the headers at the top of ghidra.
+	- Ghidra lets you click on the headers with left, right, or middle click.
+	- Once clicked, you can have a "MouseEntry" / "MouseExit" events for hovering, along with click event types.
+	- Click on graph -> calls using model -> Isolated 

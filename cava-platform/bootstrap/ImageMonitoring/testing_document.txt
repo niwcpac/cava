@@ -1,0 +1,81 @@
+---- Python External Instrumentation Testing Document V 1.0 ----
+
+
+=== Introduction ===
+This document will describe how to set up and run the automated testing software for python external instrumentation.
+
+There are two ways to run this test, locally on the host machine or inside the vagrant VM. This document will cover
+both and expectations for output.
+
+****** IMPORTANT ******
+Whether you run the code locally or on vagrant, make sure you have ghidra up and running BEFORE starting the python script.
+Open it up and make sure that it is showing on the screen. If you lack screen real estate to have both terminal and 
+ghidra showing, there is a brief 2 second window where you can start the program and then bring ghidra to the fore-ground.
+The program will be moving the mouse automatically, do not touch the mouse until it stops moving.
+
+ALSO: Make a mental note of the panels currently showing in ghidra and then manually verify that the testing program
+identified them accurately. An example of the output from the manual verification portion of the testing script is:
+
+[VERIFY MANUALLY] Found: 7 | Total Possible: 11
+	Found Coordinates:
+		-> SymbolTree
+		-> DataTypeManager
+		-> ProgramTrees
+		-> DisplayListing
+		-> TaskInstructions
+		-> BackButton
+		-> ForwardButton
+	Missing Coordinates: 
+		-> TaskSurvey
+		-> DefinedStrings
+		-> Decompiler
+		-> FunctionGraph
+
+In this example output, there are 4 windows with no coordinates. Verify by hand that those are in fact not showing 
+on the ghidra interface, otherwise there may be an error in how the code identifies window locations!
+
+***********************
+
+=== Running Locally ===
+In the directory with this file in it, open a terminal and execute:
+python3 pyautogui_tester.py
+
+If you are missing pyautogui or other python libraries you will need to install them first.
+
+=== Running on the Vagrant VM ===
+Execute:
+cd /vagrant/cava-platform/bootstrap/ImageMonitoring
+
+Make sure ghidra is up with all windows you want to test, then do:
+sudo python3 pyautogui_tester.py
+
+Note: With out sudo it will fail to kill the processes and delete the log file, and it will error with
+	  out running any tests.
+
+
+=== Tests Run Automatically ===
+-- Set Up --
+1) Delete existing log files
+2) Kill any other python instrumentation running on the system
+-- Window Events --
+3) Go through all known windows and enter/exit them, left and right click, scroll up and down.
+-- Header Events --
+4) Click on each menu option individually
+5) Click on "File", hover over all headers, then click on "Help" to cancel the hovering functionality.
+6) Click on the drop down item in select -> data.
+7) Click on the sub menu item in graph -> graph output -> graph export
+
+Wait a few moments to get results and close down the processes.
+
+=== Interpretting Results ===
+If the program is successful and all tests pass, you should see output very similar to the following:
+
+[VERIFYING RESULTS]
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.001s
+
+OK
+
+--
+If there is an error, it will tell you the exact key/value pair that does not line up. 

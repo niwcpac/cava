@@ -1,0 +1,15 @@
+{
+  "end": "",
+  "name": "Sample_Introduction",
+  "start": "",
+  "autoSeek": "true",
+  "surveytasks": "10",
+  "survey": "true",
+  "taskID": 100,
+  "trialID": "1",
+  "instructions": "Introduction-instructions.txt",
+  "program": "hello_world",
+  "answerKey": "Not Applicable",
+  "keyAddresses": [],
+  "expectedResponse": "I understand"
+}

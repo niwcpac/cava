@@ -1,0 +1,13 @@
+[Unit]
+Description=Lab Streaming Layer Data Forwarder
+
+[Service]
+Type=exec
+ExecStart=/opt/cava/LabStreamingLayerRunner start
+ExecStop=/opt/cava/LabStreamingLayerRunner stop
+TimeoutStopSec=5
+RemainAfterExit=no
+PIDFile=/run/LabStreamingLayer.pid
+
+[Install]
+WantedBy=graphical.target

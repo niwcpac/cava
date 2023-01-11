@@ -1,0 +1,606 @@
+                           Source Code Lookup (SourceCodeLookupPlugin) |                   F3
+                            Remove Stack Depth Change (FunctionPlugin) |               DELETE
+                                       Export Program (ExporterPlugin) |                    O
+     Modularize By Subroutine [Isolated Entry] (ModuleAlgorithmPlugin) |                     
+                                           Cut (DataTypeManagerPlugin) |               Ctrl-X
+                                   ByteViewer Clone (ByteViewerPlugin) |         Ctrl-Shift-T
+                        FSB Export Eclipse Project (FileFormatsPlugin) |                     
+                                        Pin Symbol (SymbolTablePlugin) |                     
+                Go To Last Active Component (ProviderNavigationPlugin) |              Ctrl-F6
+                          Go To Address/Label (GoToAddressLabelPlugin) |                    G
+                                   Set Fallthrough (FallThroughPlugin) |                     
+                                      Save File (ProgramManagerPlugin) |               Ctrl-S
+                         Show Outgoing Edges (FunctionCallGraphPlugin) |                     
+                                        Select All (CodeBrowserPlugin) |               Ctrl-A
+                    Analyze Function Stack References (FunctionPlugin) |                     
+                                    Import C DataTypes (CParserPlugin) |                     
+                                             Register Manager (Shared) |                     
+                                                 Configure Tool (Tool) |                     
+                   Virtual Disassembler - Current Instruction (Shared) |                     
+                               Highlight Defined Use (DecompilePlugin) |                     
+                              Select All Flows To (SelectByFlowPlugin) |                     
+                                 FSB Decompile JAR (FileFormatsPlugin) |                     
+                                                Recently Used (Shared) |                    Y
+           Search for Direct References (FindPossibleReferencesPlugin) |                     
+                                Program Options (ProgramManagerPlugin) |                     
+                             Create External Function (FunctionPlugin) |                    F
+                                        Recurse Depth (CallTreePlugin) |                     
+                                                   Save Tool As (Tool) |                     
+                                         Go To Source (CallTreePlugin) |                     
+                                               Paste (ClipboardPlugin) |               Ctrl-V
+                                  Copy Special Again (ClipboardPlugin) |                     
+                    Clear External Name Association (ReferencesPlugin) |                     
+                                  Collapse All (DataTypeManagerPlugin) |               Alt-UP
+                           Select Program Changes (SelectByFlowPlugin) |                     
+                               Search for Scalars (ScalarSearchPlugin) |                     
+                                                      Listing (Shared) |                     
+                  Previous Location in History (NextPrevAddressPlugin) |             Alt-LEFT
+                   Open File Data Type Archive (DataTypeManagerPlugin) |                     
+                                           Add (DataTypePreviewPlugin) |                 PLUS
+                                       Refresh (GhidraScriptMgrPlugin) |                     
+                           Edit Stack Frame (StackEditorManagerPlugin) |                     
+                                Cut SymbolTree Node (SymbolTreePlugin) |               Ctrl-X
+                                         Split Block (MemoryMapPlugin) |                     
+                                   Filter Registers (Register Manager) |                     
+                                            Compare Functions (Shared) |              Shift-C
+                                       SelectBlock (SelectBlockPlugin) |                     
+                         select addresses (ProgramTreeSelectionPlugin) |                     
+                                        Delete (DataTypePreviewPlugin) |               DELETE
+                         Show Incoming Edges (FunctionCallGraphPlugin) |                     
+                                          Save (DataTypeManagerPlugin) |                     
+                     Set Selection From Highlight (SetHighlightPlugin) |                     
+                                     Delete Equate (EquateTablePlugin) |                     
+                        Remove Invalid Archive (DataTypeManagerPlugin) |                     
+                                              Refresh (CallTreePlugin) |                     
+                         Show Call Trees For Function (CallTreePlugin) |                     
+                                                      Save Tool (Tool) |                     
+                                           Code Viewer Clone (Listing) |         Ctrl-Shift-T
+                                   Embedded Media (AutoAnalysisPlugin) |                     
+                                       Retype Return (DecompilePlugin) |               Ctrl-L
+                                Convert To Unsigned Hex (EquatePlugin) |                     
+                Graph Calls using Overlapped Code (ProgramGraphPlugin) |                     
+                           Remove Signature Override (DecompilePlugin) |                     
+                                                Function Tags (Shared) |                     
+                            Script Directories (GhidraScriptMgrPlugin) |                     
+                               Ghidra API Help (GhidraScriptMgrPlugin) |                     
+                     Show Instruction Info (ShowInstructionInfoPlugin) |                     
+                                       Data (QualifiedSelectionPlugin) |                     
+                        Set Favorite Data Type (DataTypeManagerPlugin) |                     
+                                                 Define qword (Shared) |                     
+                                          Copy (DataTypeManagerPlugin) |               Ctrl-C
+                                                 Define float (Shared) |                     
+                      Clear Translation Value (TranslateStringsPlugin) |                     
+               Make Selection From Hovered Edges (FunctionGraphPlugin) |                     
+                                      Function ID (AutoAnalysisPlugin) |                     
+                                          Back Refs (SelectRefsPlugin) |       Ctrl-SEMICOLON
+                            Create Address Tables (AutoAnalysisPlugin) |                     
+                                View Checkouts (DataTypeManagerPlugin) |                     
+                                          Configure All Plugins (Tool) |                     
+                                   Cycle: char,string,unicode (Shared) |                QUOTE
+                                      Reset Interpreter (PythonPlugin) |               Ctrl-D
+                         Hide Outgoing Edges (FunctionCallGraphPlugin) |                     
+                                     Rename Variable (DecompilePlugin) |                    L
+                             Rename Function Variable (FunctionPlugin) |                    L
+                                 Analyze All Open (AutoAnalysisPlugin) |                     
+                              Convert To Signed Decimal (EquatePlugin) |                     
+                                  Filter Data Types (DataWindowPlugin) |                     
+                         Hide Incoming Edges (FunctionCallGraphPlugin) |                     
+                                  Select Function (SelectByFlowPlugin) |                     
+                                Delete Archive (DataTypeManagerPlugin) |               DELETE
+                               Cut folder/fragment (ProgramTreePlugin) |                     
+                                Update (MyProgramChangesDisplayPlugin) |                     
+                                  Jump to a XRef (FunctionGraphPlugin) |                     
+                                        RefreshBundles (BundleManager) |                     
+                                     Expand Block Up (MemoryMapPlugin) |                     
+                                             Load PDB File (PdbPlugin) |                     
+                                     Delete Symbols (SymbolTreePlugin) |               DELETE
+                                Vertex View Mode (FunctionGraphPlugin) |                     
+                                      Replace View (ProgramTreePlugin) |               Ctrl-R
+                                                Copy (ClipboardPlugin) |               Ctrl-C
+                          Decompiler Parameter ID (AutoAnalysisPlugin) |                     
+                    Collapse All folders/fragments (ProgramTreePlugin) |                     
+                                   Show References To Address (Shared) |                     
+                           Create Function Definition (FunctionPlugin) |                     
+                      Editor: Create Structure From Selection (Shared) |                     
+                                        Edit Comments (CommentsPlugin) |            SEMICOLON
+                                  Delete Tree View (ProgramTreePlugin) |                     
+                                                Define string (Shared) |                     
+                                           Redo (ProgramManagerPlugin) |         Ctrl-Shift-Z
+                                         EnableBundles (BundleManager) |                     
+                                 Select Complement (CodeBrowserPlugin) |                     
+                 Search Instruction Patterns (InstructionSearchPlugin) |                     
+                                                 Program Tree (Shared) |                     
+                                        Go To Program (MultiTabPlugin) |              Ctrl-F7
+                                               Save New Tool As (Tool) |                     
+                                         Add Bookmark (BookmarkPlugin) |               Ctrl-D
+                                     Toggle Header (CodeBrowserPlugin) |                     
+                        Select Limited Flows From (SelectByFlowPlugin) |                     
+                                         Clear Console (ConsolePlugin) |                     
+                                Processor Options (DisassemblerPlugin) |                     
+                                    Filter Duplicates (CallTreePlugin) |                     
+                               Previous Color Range (ColorizingPlugin) |                     
+                                             Choose Data Type (Shared) |                    T
+                                   Clear All Colors (ColorizingPlugin) |                     
+                                            Stack (AutoAnalysisPlugin) |                     
+                                 Error Bookmarks (MarkerManagerPlugin) |                     
+                         Group Selected Vertices (FunctionGraphPlugin) |                     
+                                     Append Graph (ProgramGraphPlugin) |                     
+                   Hide Outgoing Level Edges (FunctionCallGraphPlugin) |                     
+                               Graph Export (GraphDisplayBrokerPlugin) |                     
+                                                 Symbol Table (Shared) |               Ctrl-T
+                                   Close Others (ProgramManagerPlugin) |                     
+                                            Add Label (LabelMgrPlugin) |                    L
+                                   Expand All Data (CodeBrowserPlugin) |                     
+                         Dock Satellite View (FunctionCallGraphPlugin) |                     
+                           Create External Location (SymbolTreePlugin) |                     
+                                          Rename Equate (EquatePlugin) |                    E
+                                                       Contents (Tool) |                     
+                                Clear Fallthroughs (FallThroughPlugin) |                     
+             Non-Returning Functions - Discovered (AutoAnalysisPlugin) |                     
+                                Disassemble Thumb (DisassemblerPlugin) |                  F12
+                              Graph AST Control Flow (DecompilePlugin) |                     
+                                             Apply Enum (EquatePlugin) |                     
+                           Static Function Call Trees (CallTreePlugin) |                     
+                                               Export (ExporterPlugin) |                     
+                               Table Data Copy Current Column (Shared) |         Ctrl-Shift-C
+                           Show Base Data Type (DataTypeManagerPlugin) |                     
+                      Display Satellite View (FunctionCallGraphPlugin) |                     
+                                 On Selection (ComputeChecksumsPlugin) |                     
+                                Block Focus Mode (FunctionGraphPlugin) |                     
+                 Select Forward Scoped Flow (SelectByScopedFlowPlugin) |                     
+                                   Create Namespace (SymbolTreePlugin) |                     
+                                            Symbol References (Shared) |                     
+                       Delete External Program Name (ReferencesPlugin) |                     
+                                     Create Library (SymbolTreePlugin) |                     
+                                 Filter Arrays (DataTypeManagerPlugin) |                     
+                                                   Memory Map (Shared) |                     
+                 Graph Calls using Multiple Entry (ProgramGraphPlugin) |                     
+                                   Expand Block Down (MemoryMapPlugin) |                     
+                        Add to Version Control (DataTypeManagerPlugin) |                     
+                                        Rename Data Field (DataPlugin) |                    N
+                                  Graph Code Flow (ProgramGraphPlugin) |                     
+                                        Rename (GhidraScriptMgrPlugin) |                     
+                         Toggle Mouse Hover Popups (CodeBrowserPlugin) |                     
+                    FSB Create Crypto Key Template (FileFormatsPlugin) |                     
+                                  Edit Function Purge (FunctionPlugin) |                     
+                  Graph Calls Using Default Model (ProgramGraphPlugin) |                     
+                  Rename Fragment from Code Browser (AutoRenamePlugin) |                     
+                           Enum from Selection (DataTypeManagerPlugin) |                     
+                                        Navigation (ProgramTreePlugin) |                     
+                                Next Function (NextPrevCodeUnitPlugin) |           Ctrl-Alt-F
+                                               Script Manager (Shared) |                     
+                             Export Data Types (DataTypeManagerPlugin) |                     
+                                        Delete (GhidraScriptMgrPlugin) |                     
+                             Paste folder/fragment (ProgramTreePlugin) |                     
+            Include Operands (except constants) (MnemonicSearchPlugin) |                     
+                            Restore Selection (RestoreSelectionPlugin) |                     
+                                Commit Params/Return (DecompilePlugin) |                    P
+                                      Create Function (FunctionPlugin) |                    F
+                                   Show Label History (LabelMgrPlugin) |                    H
+                                Select Subroutine (SelectByFlowPlugin) |                     
+                                   Table Data Copy by Columns (Shared) |                     
+                              Twos Complement (ComputeChecksumsPlugin) |                     
+                            Find Uses of Field (DataTypeManagerPlugin) |                     
+                 Graph Calls using Isolated Entry (ProgramGraphPlugin) |                     
+     Modularize By Subroutine [Multiple Entry] (ModuleAlgorithmPlugin) |                     
+                                  Default Settings (ViewStringsPlugin) |                     
+                          Select Limited Flows To (SelectByFlowPlugin) |                     
+                              Navigate Outgoing Nodes (CallTreePlugin) |                     
+                                  New Category (DataTypeManagerPlugin) |                     
+                             Convert To Unsigned Binary (EquatePlugin) |                     
+                                     Close File (ProgramManagerPlugin) |               Ctrl-W
+                                Next Bookmark (NextPrevCodeUnitPlugin) |           Ctrl-Alt-B
+                                             Functions Window (Shared) |                     
+                             Download_PDB_File (PdbSymbolServerPlugin) |                     
+                     Set Highlight From Selection (SetHighlightPlugin) |               Ctrl-H
+                            Function Start Search (AutoAnalysisPlugin) |                     
+                                        Merge Blocks (MemoryMapPlugin) |                     
+                                 Graph Block Flow (ProgramGraphPlugin) |                     
+                                       Create Class (SymbolTreePlugin) |                     
+                                    Go To Destination (CallTreePlugin) |                     
+                               Instructions (QualifiedSelectionPlugin) |                     
+                                           Checksum Generator (Shared) |                     
+                       Show default register values (Register Manager) |                     
+                                    Expand All (DataTypeManagerPlugin) |             Alt-DOWN
+                               Next Undefined (NextPrevCodeUnitPlugin) |           Ctrl-Alt-U
+                                               Comment Window (Shared) |                     
+                                 Reset Graph (FunctionCallGraphPlugin) |                     
+                                   EditEclipse (GhidraScriptMgrPlugin) |                     
+                                   Re-create Function (FunctionPlugin) |                     
+                                          Cycle: float,double (Shared) |                    F
+                     Disassociate From Archive (DataTypeManagerPlugin) |                     
+                      Create Labels From Enums (DataTypeManagerPlugin) |                     
+                     Disassemble MIPS16/Micromips (DisassemblerPlugin) |                  F12
+                               Align Data Type (DataTypeManagerPlugin) |                     
+                                 Cycle: byte,word,dword,qword (Shared) |                    B
+                      Next Location in History (NextPrevAddressPlugin) |            Alt-RIGHT
+                                      Reuse Graph (ProgramGraphPlugin) |                     
+                                           Export KeyBindings (Shared) |                     
+                   Show Outgoing Level Edges (FunctionCallGraphPlugin) |                     
+                    Create Typedef From Dialog (DataTypeManagerPlugin) |                     
+                                   Close Tree View (ProgramTreePlugin) |                     
+                                        DisableBundles (BundleManager) |                     
+                                      Convert To Double (EquatePlugin) |                     
+                                     Delete Bookmarks (BookmarkPlugin) |               DELETE
+   Modularize By Subroutine [Partitioned Code] (ModuleAlgorithmPlugin) |                     
+                          Function Graph Options (FunctionGraphPlugin) |                     
+                                  Disassemble PPC (DisassemblerPlugin) |                  F11
+                                Edit Variable Comment (FunctionPlugin) |            SEMICOLON
+                             Auto Set Fallthroughs (FallThroughPlugin) |                     
+                                        Clear Color (ColorizingPlugin) |                     
+                                         RemoveBundles (BundleManager) |                     
+                                  Lock Archive (DataTypeManagerPlugin) |                     
+                                 Repeat Text Search (SearchTextPlugin) |        Ctrl-Shift-F3
+                                  Editor: Unpackage Component (Shared) |                     
+                                     Show All History (LabelMgrPlugin) |                    H
+                          Sort Fragments By Address (ModuleSortPlugin) |                     
+                              Copy folder/fragment (ProgramTreePlugin) |                     
+                                      Edit Data Type (DecompilePlugin) |                     
+                                Create Typedef (DataTypeManagerPlugin) |                     
+                                      Set EOL Comment (CommentsPlugin) |                     
+                                   Editor: Move Components Up (Shared) |                     
+                              Show Hex Values (ComputeChecksumsPlugin) |                     
+                                Disassemble XGate (DisassemblerPlugin) |                  F11
+                                           DataTypes Provider (Shared) |                     
+                                 Remove Highlight (SetHighlightPlugin) |                     
+                              Data References From (SymbolTablePlugin) |                     
+                                 Disassemble MIPS (DisassemblerPlugin) |                  F11
+                                          Remove Equate (EquatePlugin) |               DELETE
+                                    Set Operand Label (LabelMgrPlugin) |           Ctrl-Alt-L
+                                Search for Strings (StringTablePlugin) |                     
+                               Remove From Group (FunctionGraphPlugin) |                     
+                               Call Convention ID (AutoAnalysisPlugin) |                     
+                                  Show History (DataTypeManagerPlugin) |                     
+                            Next Non-Function (NextPrevCodeUnitPlugin) |           Ctrl-Alt-N
+                                                   Edit Options (Tool) |                     
+                Subtract Selection From Highlight (SetHighlightPlugin) |                     
+                          Align All Data Types (DataTypeManagerPlugin) |                     
+                                    Next Data (NextPrevCodeUnitPlugin) |           Ctrl-Alt-D
+                               Exclude Operands (MnemonicSearchPlugin) |                     
+       Navigate on Incoming Location Changes (FunctionCallGraphPlugin) |                     
+                      Expand All folders/fragments (ProgramTreePlugin) |                     
+                 Previous Data Type in History (DataTypeManagerPlugin) |                     
+                       Create Table From Selection (CodeBrowserPlugin) |                     
+                  Remove folder/fragment from View (ProgramTreePlugin) |               Ctrl-X
+                                   Clear Flow and Repair (ClearPlugin) |                     
+                                 Close Archive (DataTypeManagerPlugin) |                     
+                                          Enum (DataTypeManagerPlugin) |                     
+                                       Edit Structure (FunctionPlugin) |                     
+                               Clear Pinned Symbol (SymbolTablePlugin) |                     
+                                     Set Post Comment (CommentsPlugin) |                     
+                                      Rename Variable (FunctionPlugin) |                    L
+                            Highlight Backward Slice (DecompilePlugin) |                     
+                             Call-Fixup Installer (AutoAnalysisPlugin) |                     
+                                   Save As File (ProgramManagerPlugin) |                     
+                                        Zoom Out (FunctionGraphPlugin) |           Ctrl-MINUS
+                      Go To Function Entry Point (FunctionGraphPlugin) |                     
+                                                   About Ghidra (Tool) |                     
+                            Follow location changes (Register Manager) |                     
+                                                  Symbol Tree (Shared) |                     
+                                          Edit (DataTypeManagerPlugin) |                     
+                                     Decompile Clone (DecompilePlugin) |         Ctrl-Shift-T
+                             Next Instruction (NextPrevCodeUnitPlugin) |           Ctrl-Alt-I
+             Rename Fragment from Program Tree View (AutoRenamePlugin) |                     
+                       Select Register Value Ranges (Register Manager) |                     
+                          Fully Expand Selected Nodes (CallTreePlugin) |                     
+               Make Selection From Focused Edges (FunctionGraphPlugin) |                     
+                                                 Define Array (Shared) |         OPEN_BRACKET
+                  Set Secondary Highlight With Color (DecompilePlugin) |                     
+                                       Rename Global (DecompilePlugin) |                    L
+                                  Relayout Graph (FunctionGraphPlugin) |                     
+                                          Function Call Graph (Shared) |                     
+                                                      Console (Shared) |                     
+                             Delete Function Variable (FunctionPlugin) |               DELETE
+                                       Editor: Edit Component (Shared) |                     
+                           Create Default Reference (ReferencesPlugin) |           Ctrl-Alt-R
+                                Unlock Archive (DataTypeManagerPlugin) |                     
+                                        Edit Function (FunctionPlugin) |                    F
+                           Go To Previous Function (CodeBrowserPlugin) |              Ctrl-UP
+                                     Rename Function (DecompilePlugin) |                    L
+                       Toggle Expand/Collapse Data (CodeBrowserPlugin) |                SPACE
+                                   Create Fragment (ProgramTreePlugin) |                     
+                           Select All Code Units (FunctionGraphPlugin) |               Ctrl-A
+                                  Set Register Values (RegisterPlugin) |               Ctrl-R
+                                    Default Data Settings (DataPlugin) |                     
+                                            Data Type Preview (Shared) |                     
+                                           Run (GhidraScriptMgrPlugin) |                     
+                                         Export to C (DecompilePlugin) |                     
+                                                 Define dword (Shared) |                     
+                                        Show Xrefs (CodeBrowserPlugin) |                     
+                                     Define TerminatedUnicode (Shared) |                     
+                       Ungroup Selected Vertices (FunctionGraphPlugin) |                     
+                   Highlight Backward Operator Slice (DecompilePlugin) |                     
+                              Convert To Unsigned Octal (EquatePlugin) |                     
+                                    Delete Symbols (SymbolTablePlugin) |               DELETE
+                                                  Save New Tool (Tool) |                     
+                          Add External Program Name (ReferencesPlugin) |                     
+                                    Demangler GNU (AutoAnalysisPlugin) |                     
+                                  Zoom to Window (FunctionGraphPlugin) |                     
+                                   Next Color Range (ColorizingPlugin) |                     
+                          XOR Checksum Values (ComputeChecksumsPlugin) |                     
+                                         Create Structure (DataPlugin) |   Shift-OPEN_BRACKET
+                                        Copy Special (ClipboardPlugin) |                     
+                            Open File System (FileSystemBrowserPlugin) |               Ctrl-I
+                                            Define longdouble (Shared) |                     
+                                     Clear Cut (DataTypeManagerPlugin) |               ESCAPE
+                   Show Incoming Level Edges (FunctionCallGraphPlugin) |                     
+                                    Set Plate Comment (CommentsPlugin) |                     
+                               FSB Load iOS Kernel (FileFormatsPlugin) |                     
+                             Dock Satellite View (FunctionGraphPlugin) |                     
+                            Convert To Unsigned Decimal (EquatePlugin) |                     
+                                  Rename Tree View (ProgramTreePlugin) |                     
+                            Delete folder/fragment (ProgramTreePlugin) |               DELETE
+                                               Define pointer (Shared) |                    P
+                                       Convert To Float (EquatePlugin) |                     
+                              Revert Data Type (DataTypeManagerPlugin) |                     
+                             Delete References From (ReferencesPlugin) |               DELETE
+                          Refresh BuiltInTypes (DataTypeManagerPlugin) |                     
+                               Set External Program (SymbolTreePlugin) |                     
+                                      Open File (ProgramManagerPlugin) |               Ctrl-O
+                                     Editor: Clear Components (Shared) |                     
+                               Go To Next Function (CodeBrowserPlugin) |            Ctrl-DOWN
+                      Toggle Search Direction (NextPrevCodeUnitPlugin) |           Ctrl-Alt-T
+                                           Add Block (MemoryMapPlugin) |                     
+                                 Editor: Edit Component Field (Shared) |                     
+                           Select Dead Subroutine (SelectByFlowPlugin) |                     
+                                      Rename Symbol (SymbolTreePlugin) |                     
+                           Function Definition (DataTypeManagerPlugin) |                     
+                          Create Offset References (OffsetTablePlugin) |                     
+                                  Convert To Signed Hex (EquatePlugin) |                     
+                        Set Default Stack Reference (ReferencesPlugin) |                    M
+                                                 Home (CallTreePlugin) |                     
+                                       Highlight (MarkerManagerPlugin) |                     
+                                DecompilerProperties (DecompilePlugin) |                     
+                                  Disassemble Arm (DisassemblerPlugin) |                  F11
+                                      Disassemble (DisassemblerPlugin) |                    D
+                            Function Graph Clone (FunctionGraphPlugin) |         Ctrl-Shift-T
+                       Find Data Types By Size (DataTypeManagerPlugin) |                     
+                                    ASCII Strings (AutoAnalysisPlugin) |                     
+                     Set Default Register Reference (ReferencesPlugin) |                    M
+                                        Overview (OverviewColorPlugin) |                     
+                                                  Define uint (Shared) |                     
+                                                  Define word (Shared) |                     
+                            Edit External Location (SymbolTablePlugin) |                     
+                        Debug Function Decompilation (DecompilePlugin) |                     
+                             Compute Checksum (ComputeChecksumsPlugin) |                     
+                                 Editor: Apply Editor Changes (Shared) |                     
+                          Create Default Tree View (ProgramTreePlugin) |                     
+                              Analysis Bookmarks (MarkerManagerPlugin) |                     
+                             GenerateChecksum (ComputeChecksumsPlugin) |                     
+                                        Rename (DataTypeManagerPlugin) |                     
+                           Show Preview Window (DataTypeManagerPlugin) |                     
+                                         Remove Label (LabelMgrPlugin) |               DELETE
+                                         Zoom In (FunctionGraphPlugin) |          Ctrl-EQUALS
+                                Changes: Unsaved (MarkerManagerPlugin) |                     
+                      Next Function in History (NextPrevAddressPlugin) |      Alt-Shift-RIGHT
+                                      Clear With Options (ClearPlugin) |                     
+                          Edit Code Block Fields (FunctionGraphPlugin) |                     
+                                                Find (DecompilePlugin) |               Ctrl-F
+                               Warning Bookmarks (MarkerManagerPlugin) |                     
+                                             Set Equate (EquatePlugin) |                    E
+                                           Undo (ProgramManagerPlugin) |               Ctrl-Z
+                          View Program Differences (ProgramDiffPlugin) |                    2
+                              Disassemble PPC-VLE (DisassemblerPlugin) |                  F12
+                                Block Hover Mode (FunctionGraphPlugin) |                     
+                                  Undefined (QualifiedSelectionPlugin) |                     
+                                      Set Image Base (MemoryMapPlugin) |                     
+                 Merge folder/fragment with Parent (ProgramTreePlugin) |                     
+                             Clear Variable Data Type (FunctionPlugin) |                    C
+                           Table Data CSV Export (by Columns) (Shared) |                     
+                             Edit External Location (SymbolTreePlugin) |                     
+                            Create Multiple Functions (FunctionPlugin) |                     
+                                              Defined Strings (Shared) |                     
+                                   Clear Selection (CodeBrowserPlugin) |                     
+                           Show Location in Graph (ProgramGraphPlugin) |                     
+                            Go To Last Active Program (MultiTabPlugin) |              Ctrl-F6
+                     Apply Function Data Types (DataTypeManagerPlugin) |                     
+                             Commit To Archive (DataTypeManagerPlugin) |                     
+                                        Set Filter (SymbolTablePlugin) |                     
+                    New File Data Type Archive (DataTypeManagerPlugin) |                     
+                                                Define double (Shared) |                     
+                             Sort Fragments By Name (ModuleSortPlugin) |                     
+                               Edit External Location (LabelMgrPlugin) |                    L
+                                          Select All (DecompilePlugin) |               Ctrl-A
+                                          Settings (ViewStringsPlugin) |                     
+                                         Union (DataTypeManagerPlugin) |                     
+                                        Delete Block (MemoryMapPlugin) |                     
+            Data Type Conflict Resolution Mode (DataTypeManagerPlugin) |                     
+                                  Editor: Show Numbers In Hex (Shared) |                     
+                                 Editor: Move Components Down (Shared) |                     
+                                   Refresh Strings (ViewStringsPlugin) |                     
+                        Carry Checksum Values (ComputeChecksumsPlugin) |                     
+                    Aggressive Instruction Finder (AutoAnalysisPlugin) |                     
+                                       Add To Program (ImporterPlugin) |                     
+                                         Navigation (SymbolTreePlugin) |                     
+                                       Commit Locals (DecompilePlugin) |                     
+                            Rename folder/fragment (ProgramTreePlugin) |                     
+                           Clear Function Return Type (FunctionPlugin) |                    C
+                                         Paste (DataTypeManagerPlugin) |               Ctrl-V
+                       Delete Register Value Ranges (Register Manager) |                     
+                                  Editor: Show Component Path (Shared) |                     
+                     Next Data Type in History (DataTypeManagerPlugin) |                     
+                                Revert Thunk Function (FunctionPlugin) |                     
+                                     References To (SymbolTablePlugin) |                     
+                      Editor: Duplicate Multiple of Component (Shared) |                     
+            Go To start of folder/fragment in View (ProgramTreePlugin) |               Ctrl-G
+                                  Zoom to Vertex (FunctionGraphPlugin) |                     
+                          Remove Secondary Highlight (DecompilePlugin) |                     
+                                  Override Signature (DecompilePlugin) |                     
+                                          Function Call Trees (Shared) |                     
+                                 Show Comment History (CommentsPlugin) |                     
+                                             Define undefined (Shared) |                     
+                 New Project Data Type Archive (DataTypeManagerPlugin) |                     
+                     Next Selected Range (NextPrevSelectedRangePlugin) |      Ctrl-BRACERIGHT
+               Create Dominance Tree (ProgramTreeModularizationPlugin) |                     
+                                         Collapse All (CallTreePlugin) |                     
+                 Navigation Incoming Location Changes (CallTreePlugin) |                     
+                                      Set Pre Comment (CommentsPlugin) |                     
+                     Remove All Secondary Highlights (DecompilePlugin) |                     
+                                         Batch Import (ImporterPlugin) |                     
+                                            Data Settings (DataPlugin) |                     
+                             Edit Function Signature (DecompilePlugin) |                     
+                                       Forward Refs (SelectRefsPlugin) |          Ctrl-PERIOD
+                               Set Stack Depth Change (FunctionPlugin) |                     
+                                                Print (PrintingPlugin) |               Ctrl-P
+                                 Collapse All Data (CodeBrowserPlugin) |                     
+                          Display Satellite View (FunctionGraphPlugin) |                     
+                                            DWARF (AutoAnalysisPlugin) |                     
+                               Go To Previous Program (MultiTabPlugin) |              Ctrl-F8
+                         Clear Current Selection (FunctionGraphPlugin) |                     
+                                       Selection (MarkerManagerPlugin) |                     
+                  Enable/Disable Byteviewer Editing (ByteViewerPlugin) |           Ctrl-Alt-E
+                            Select All Flows From (SelectByFlowPlugin) |                     
+                            Select Bookmark Locations (BookmarkPlugin) |                     
+                                           New (GhidraScriptMgrPlugin) |                     
+                 Next Highlighted Range (NextPrevHighlightRangePlugin) |               Ctrl-0
+                       Add Selection To Highlight (SetHighlightPlugin) |                     
+                                           Scroll Lock (ConsolePlugin) |                     
+                                        Rename Field (DecompilePlugin) |                    L
+                                     Filter Bookmarks (BookmarkPlugin) |                     
+                      Set External Name Association (ReferencesPlugin) |                     
+                                Edit Function Tags (FunctionTagPlugin) |                     
+                                    About Program (AboutProgramPlugin) |                     
+                                  Note Bookmarks (MarkerManagerPlugin) |                     
+                                       Search Memory (MemSearchPlugin) |                    S
+                                     Reset Graph (FunctionGraphPlugin) |                     
+                                Create Thunk Function (FunctionPlugin) |                     
+                                          Cursor (MarkerManagerPlugin) |                     
+                                                 Close Window (Shared) |                     
+                                  Info Bookmarks (MarkerManagerPlugin) |                     
+                           Open/Close Program View (ProgramDiffPlugin) |           Ctrl-Alt-C
+                                   Convert to Class (SymbolTreePlugin) |                     
+                                        Retype Field (DecompilePlugin) |               Ctrl-L
+                                          CleanBundles (BundleManager) |                     
+                                        Update (DataTypeManagerPlugin) |                     
+                                          Set Color (ColorizingPlugin) |                     
+                                Editor: Insert Undefined Byte (Shared) |                     
+                                                    Exit Ghidra (Tool) |               Ctrl-Q
+               Graph Calls using Partitioned Code (ProgramGraphPlugin) |                     
+                       Decompiler Switch Analysis (AutoAnalysisPlugin) |                     
+                                    Editor: Delete Components (Shared) |                     
+                                                Equates Table (Shared) |                     
+                                         Editor: Add Bitfield (Shared) |                     
+                                   Select Call Source (CallTreePlugin) |                     
+                                                   Define int (Shared) |                     
+                              Export KeyBindings. (Export KeyBindings) |                     
+                                   Key Binding (GhidraScriptMgrPlugin) |                     
+                           Disassemble Restricted (DisassemblerPlugin) |                     
+                           Split Out As New Variable (DecompilePlugin) |                     
+                            Go To External Location (SymbolTreePlugin) |                     
+                             Delete Function Variable Comment (Shared) |               DELETE
+                  Previous Function in History (NextPrevAddressPlugin) |       Alt-Shift-LEFT
+                          View/Edit References From (ReferencesPlugin) |                    R
+                                  Interrupt Interpreter (PythonPlugin) |               Ctrl-I
+                                 Add Reference From (ReferencesPlugin) |                     
+                      Default Graph Display (GraphDisplayBrokerPlugin) |                     
+                                             Refresh (DecompilePlugin) |                     
+                              Select Call Destination (CallTreePlugin) |                     
+                                Repeat Memory Search (MemSearchPlugin) |                   F3
+                                                BundleManager (Shared) |                     
+                                 Save All Files (ProgramManagerPlugin) |                     
+                                Create Pointer (DataTypeManagerPlugin) |                     
+                                   Next Label (NextPrevCodeUnitPlugin) |           Ctrl-Alt-L
+                                     Auto Analyze (AutoAnalysisPlugin) |                    A
+                                     Structure (DataTypeManagerPlugin) |                     
+                                      Delete Comments (CommentsPlugin) |               DELETE
+                                Disassemble HCS12 (DisassemblerPlugin) |                  F12
+                          Delete Register Value Range (RegisterPlugin) |               DELETE
+    Modularize By Subroutine [Overlapped Code] (ModuleAlgorithmPlugin) |                     
+                   Hide Incoming Level Edges (FunctionCallGraphPlugin) |                     
+                                       Retype Global (DecompilePlugin) |               Ctrl-L
+                                      Close All (ProgramManagerPlugin) |                     
+                                      Paste Symbols (SymbolTreePlugin) |               Ctrl-V
+                                     Make Selection (SymbolTreePlugin) |                     
+                                         Editor: Find Uses of (Shared) |                     
+                       Instruction References From (SymbolTablePlugin) |                     
+                                Clear Register Values (RegisterPlugin) |                     
+                                                        Bytes (Shared) |                     
+                               Include Operands (MnemonicSearchPlugin) |                     
+                               Disassemble Static (DisassemblerPlugin) |                     
+                               CheckIn (MyProgramChangesDisplayPlugin) |                     
+                Open Project Data Type Archive (DataTypeManagerPlugin) |                     
+                                     Define TerminatedCString (Shared) |                     
+                                      Rename Function (FunctionPlugin) |                    L
+                          Clear History Buffer (NextPrevAddressPlugin) |                     
+                               Set Repeatable Comment (CommentsPlugin) |                     
+                                                     Close Tool (Tool) |                     
+                                         Editor: Create Array (Shared) |                     
+                                        Editor: Edit Bitfield (Shared) |                     
+                                     Create Folder (ProgramTreePlugin) |                     
+                    Next Different Byte Value (NextPrevCodeUnitPlugin) |           Ctrl-Alt-V
+                       Add Default Memory Reference (ReferencesPlugin) |                    M
+                                       CheckIn (DataTypeManagerPlugin) |                     
+                                            External Programs (Shared) |                     
+                               Edit Vertex Label (FunctionGraphPlugin) |                     
+                              Installed Processors (ProgramListPlugin) |                     
+                          Recover Structure Variable (DecompilePlugin) |   Shift-OPEN_BRACKET
+                        Translate with Manual (TranslateStringsPlugin) |                     
+                              Shared Return Calls (AutoAnalysisPlugin) |                     
+                                               Make Selection (Shared) |                     
+                                              Table Data Copy (Shared) |               Ctrl-C
+                 Previous Selected Range (NextPrevSelectedRangePlugin) |       Ctrl-BRACELEFT
+                                        Table Data CSV Export (Shared) |                     
+                                           Page Setup (PrintingPlugin) |                     
+                                        Search Text (SearchTextPlugin) |         Ctrl-Shift-E
+                                                    Bookmarks (Shared) |               Ctrl-B
+                                          Edit (GhidraScriptMgrPlugin) |                     
+                     Show Processor Manual (ShowInstructionInfoPlugin) |                     
+                                        Convert To Char (EquatePlugin) |                     
+                             Highlight Forward Slice (DecompilePlugin) |                     
+                                   Go To Next Program (MultiTabPlugin) |              Ctrl-F9
+             Previous Highlighted Range (NextPrevHighlightRangePlugin) |               Ctrl-9
+                    Highlight Forward Operator Slice (DecompilePlugin) |                     
+                             Set Secondary Highlight (DecompilePlugin) |                     
+                                Byte Viewer Options (ByteViewerPlugin) |                     
+                   Graph Node Function Calls (FunctionCallGraphPlugin) |                     
+                 Toggle Show Translated Value (TranslateStringsPlugin) |                     
+                                 Set Thunked Function (FunctionPlugin) |                     
+                                           Find References To (Shared) |         Ctrl-Shift-F
+               Search for Address Tables (AutoTableDisassemblerPlugin) |                     
+                                      Delete Function (FunctionPlugin) |               DELETE
+                   Capture Function Data Types (DataTypeManagerPlugin) |                     
+                                       Editor: Create Pointer (Shared) |                     
+                                    Open Tree View (ProgramTreePlugin) |                     
+                 Select Reverse Scoped Flow (SelectByScopedFlowPlugin) |                     
+                            Ungroup All Vertices (FunctionGraphPlugin) |                     
+                                                  Define char (Shared) |                     
+                                        Clear Code Bytes (ClearPlugin) |                    C
+                                                  Define byte (Shared) |                     
+                                          Move Block (MemoryMapPlugin) |                     
+                                  UndoCheckOut (DataTypeManagerPlugin) |                     
+                                   Extract and Import (ImporterPlugin) |           Ctrl-Alt-I
+                            Edit Archive Paths (DataTypeManagerPlugin) |                     
+                               Filter Pointers (DataTypeManagerPlugin) |                     
+                                            Rerun Last Script (Shared) |         Ctrl-Shift-R
+                                                  Define long (Shared) |                     
+                                                   Decompiler (Shared) |               Ctrl-E
+                                      CheckOut (DataTypeManagerPlugin) |                     
+                            Clear Parameter Data Type (FunctionPlugin) |                    C
+                                               Function Graph (Shared) |                     
+                           Update From Archive (DataTypeManagerPlugin) |                     
+                                          Import File (ImporterPlugin) |                    I
+                                                    Export Tool (Tool) |                     
+                                           Edit Data Type (DataPlugin) |                     
+                                             Table Select All (Shared) |               Ctrl-A
+                                                       Python (Shared) |                     
+                                  Editor: Duplicate Component (Shared) |                     
+        Create Complexity Depth Tree (ProgramTreeModularizationPlugin) |                     
+                Include Data Members in Filter (DataTypeManagerPlugin) |                     
+                                            Assemble (AssemblerPlugin) |         Ctrl-Shift-G
+                           Find References to Symbol (DecompilePlugin) |                     
+                 Display Function Call Graph (FunctionCallGraphPlugin) |                     
+                                                 Define ulong (Shared) |                     
+                              Ones Complement (ComputeChecksumsPlugin) |                     
+                                           Edit Label (LabelMgrPlugin) |                    L
+                                             Relocation Table (Shared) |                     
+                           Display Popup Windows (FunctionGraphPlugin) |                     
+                                                  Define void (Shared) |                    V
+                               Find Data Types (DataTypeManagerPlugin) |               Ctrl-F
+                                     Retype Variable (DecompilePlugin) |               Ctrl-L
+                                        Delete (DataTypeManagerPlugin) |               DELETE
+                                            Clear Interpreter (Python) |                     
+                                                  Data Window (Shared) |                     
+                                                 Remove Items (Shared) |               DELETE
+                                            AddBundles (BundleManager) |                     
+                          Modify Instruction Flow (DisassemblerPlugin) |                     
+                                            Export Default Tool (Tool) |                     

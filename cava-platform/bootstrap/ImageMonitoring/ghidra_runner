@@ -1,0 +1,31 @@
+#!/bin/sh
+# Shell script for starting/stopping the ghidra_action_monitor.py python script
+PROGRAM_LOCATION="/opt/cava/ghidra_action_monitor.py"
+LOG="/opt/cava-log/GhidraClickLogs.log"
+start() {
+	# Check if we are already started, do not start the python code.
+	PID=`pgrep -f $PROGRAM_LOCATION`
+	if [ $PID ]; then
+		echo "ghidra_action_monitor already started with process ID $PID, not starting a new instance" >> $LOG
+		exit
+	fi
+
+	echo "Starting python external instrumentation: ghidra_action_monitor.py" >> $LOG
+	# MUST update the environment variables for this python program.
+	export DISPLAY=":0.0"
+	export XAUTHORITY="/home/vagrant/.Xauthority"
+	exec python3 $PROGRAM_LOCATION
+}
+stop() {
+	PID=`pgrep -f $PROGRAM_LOCATION`
+	if [ $PID ]; then
+		echo "Killing ghidra_action_monitor script with PID $PID" >> $LOG
+		kill -9 $PID
+		sleep 1
+	else
+		echo "Process PID for ghidra_action_monitor not found" >> $LOG
+	fi
+}
+case $1 in
+	start|stop) "$1" ;;
+esac

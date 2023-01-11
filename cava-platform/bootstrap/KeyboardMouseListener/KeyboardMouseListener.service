@@ -1,0 +1,14 @@
+[Unit]
+Description=Keyboard and Mouse Listener
+
+[Service]
+Type=exec
+ExecStart=/opt/cava/KeyboardMouseRunner start
+ExecStop=/opt/cava/KeyboardMouseRunner stop
+RemainAfterExit=no
+PIDFile=/run/KeyboardMouseListener.pid
+Environment="DISPLAY=:0.0"
+Environment="XAUTHORITY=/home/vagrant/.Xauthority"
+
+[Install]
+WantedBy=graphical.target

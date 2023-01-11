@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=/home/vagrant/startCavaDaemons.sh
+Icon=emblem-important
+StartupNotify=false
+Terminal=true
+Categories=Utility;X-XFCE;X-Xfce-Toplevel;
+OnlyShowIn=XFCE;
+Name=Cava Startup
+Comment=Start CAVA event logger(s)
+X-XFCE-Source=file:///usr/share/applications/xfce4-run.desktop
+Path=

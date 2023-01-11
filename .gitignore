@@ -1,0 +1,14 @@
+.DS_Store
+.vagrant
+*.class
+*.swp
+*.pyc
+__pycache__
+eclipse-workspace/.metadata
+cava-platform-*.tgz
+ghidra_extension_release.txt
+metadata-build-commit
+metadata-install-commit
+metadata-release-commit
+metadata-release-date
+cava-platform/release-metadata

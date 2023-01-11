@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=/home/vagrant/viewCavaLogs.sh
+Icon=emblem-default
+StartupNotify=false
+Terminal=true
+Categories=Utility;X-XFCE;X-Xfce-Toplevel;
+OnlyShowIn=XFCE;
+Name=Cava Verify
+Comment=Output LSL Logs to Terminal
+X-XFCE-Source=file:///usr/share/applications/xfce4-run.desktop
+Path=

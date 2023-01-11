@@ -1,0 +1,15 @@
+{
+  "end": "100003f9c",
+  "name": "Sample_Task_1",
+  "start": "",
+  "autoSeek": "true",
+  "surveytasks": "",
+  "survey": "false",
+  "taskID": 120,
+  "trialID": "1",
+  "instructions": "Sample_Task_1-instructions.txt",
+  "program": "hello_world",
+  "answerKey": "100003f9c",
+  "keyAddresses": [["0x100003f9c","String location"]],
+  "expectedResponse": "finished"
+}

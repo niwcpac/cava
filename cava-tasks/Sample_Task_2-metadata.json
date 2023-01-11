@@ -1,0 +1,15 @@
+{
+  "end": "1191be",
+  "name": "Cross_Reference_1",
+  "start": "",
+  "autoSeek": "true",
+  "surveytasks": "",
+  "survey": "false",
+  "taskID": 80,
+  "trialID": "1",
+  "instructions": "Cross_Reference_1-instructions.txt",
+  "program": "douglas.bin",
+  "answerKey": "Navigate to 'initialize database' in the listing view. Move the scroll bar to the right and double click on the address 001191be.",
+  "keyAddresses": [["0x1191be", "Cross Reference Task"]],
+  "expectedResponse": "0x1191be"
+}

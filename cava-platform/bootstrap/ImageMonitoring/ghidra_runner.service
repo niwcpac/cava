@@ -1,0 +1,12 @@
+[Unit]
+Description=Ghidra Image Locater and Logger
+
+[Service]
+Type=exec
+ExecStart=/opt/cava/ghidra_runner start
+ExecStop=/opt/cava/ghidra_runner stop
+TimeoutStopSec=5
+RemainAfterExit=no
+
+[Install]
+WantedBy=graphical.target

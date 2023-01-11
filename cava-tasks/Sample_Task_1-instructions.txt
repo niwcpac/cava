@@ -1,0 +1,25 @@
+Instructions:
+1. Start at address 0x110208.
+2. Inspect the decompiled function and the conditional expression. 
+2. Use Ghidra's comment feature, and add a plate comment to the function call which 'returns zero when testbed is not detected'.
+3. Enter the 'finished' in the 'Result' field and click the 'Enter response' button when you are ready to continue.
+**Scroll down only if you need interface or task hints.
+
+
+
+
+
+
+
+
+
+
+
+
+Hints:
+1. Start at address 0x110208. 
+2. If needed type hotkey 'g' and to bring up the 'Go To' interface and enter the address 0x110208.
+3. Right-click on the function call 'FUN_00110250'. 
+4. Select 'Comments->Set Plate Comment' from the context menu.
+5. Enter 'returns zero when testbed is not detected'.  Click 'Ok'. 
+5. Enter the 'finished' in the 'Result' field and click the 'Enter response' button when you are ready to continue.

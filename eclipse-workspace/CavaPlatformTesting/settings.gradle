@@ -1,0 +1,14 @@
+include ':CavaListener'
+project(':CavaListener').projectDir = new File(settingsDir, '../CavaListener')
+
+include ':Cantordust'
+project(':Cantordust').projectDir = new File(settingsDir, '../Cantordust')
+
+include ':CavaDecompile'
+project(':CavaDecompile').projectDir = new File(settingsDir, '../CavaDecompile')
+
+include ':CavaFunctionGraph'
+project(':CavaFunctionGraph').projectDir = new File(settingsDir, '../CavaFunctionGraph')
+
+include ':CavaCodeBrowser'
+project(':CavaCodeBrowser').projectDir = new File(settingsDir, '../CavaCodeBrowser')

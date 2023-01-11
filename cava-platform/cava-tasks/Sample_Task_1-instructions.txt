@@ -1,0 +1,22 @@
+Instructions:
+1. Start at address 0x100000000.
+2. Inspect the binary and familiarize yourself with Ghidra. 
+3. Use the Defined Strings tool to find where "Hello World!" is stored.
+**Scroll down only if you need interface or task hints.
+
+
+
+
+
+
+
+
+
+
+
+
+Hints:
+1. Start at address 0x100000000. 
+2. Left-Click the Defined Strings tool below the Decompiler
+3. Scroll through the entries and look for "Hello World!"
+4. Copy paste address

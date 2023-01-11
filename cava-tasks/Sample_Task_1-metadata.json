@@ -1,0 +1,15 @@
+{
+  "end": "110208",
+  "name": "Annotation_1",
+  "start": "110208",
+  "autoSeek": "true",
+  "surveytasks": "",
+  "survey": "false",
+  "taskID": 120,
+  "trialID": "1",
+  "instructions": "Annotation_1-instructions.txt",
+  "program": "douglas.bin",
+  "answerKey": "Navigate to this function, add a plate comment to the function call stating 'returns zero when testbed is not detected'",
+  "keyAddresses": [["0x110211","Annotation Task"]],
+  "expectedResponse": "finished"
+}

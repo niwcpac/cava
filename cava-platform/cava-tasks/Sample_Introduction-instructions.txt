@@ -1,0 +1,31 @@
+This experiment is designed to measure your interactions with a reverse engineering tool while performing common tasks.  You will use this task sequencing interface to start each task and to indicate when you have finished the task.  For each task a set of instructions will be presented in this text area.  The first few tasks are intended to demonstrate Ghidra tool interface and may be repeated multiple times for different input types or locations within the program being analyzed.
+
+Instructions: 
+- Read these instructions completely, asking the experimenters for clarification if needed.
+- Each task will ask you to enter a value in the Results box.  
+- Entering a response and clicking the submit button will complete each task. 
+- Please follow task instructions to the best of your ability.
+- Each set of task instructions has optional 'Hints' which can be viewed by scrolling down.
+- Work in a quiet and distraction free environment. 
+- Make sure the Ghidra interface is maximized on screen during the experiment.
+- Do not minimize or change the window size for Ghidra during the experiment.
+- Do not modify or re-arrange the layout or size of the modules in Ghidra. 
+- Do not add additional modules to Ghidra or change the Ghidra configuration. 
+- Do not shut down or restart Ghidra during the experiment as this will reset the task sequence.
+- You may freely use Ghidra's application menus, context menus, hot-keys, and normal mouse and keyboard interaction to use Ghidra's tools and interface. 
+- When requested, please complete each survey as accurately as you are able. 
+**Scroll down to complete the introduction.
+
+
+
+
+
+
+
+
+
+
+
+Hints:
+1. Read the instructions above. 
+2. Enter "I understand" in the Results box and click the 'Enter response' button when you are ready to continue.

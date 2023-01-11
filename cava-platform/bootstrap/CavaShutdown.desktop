@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=/home/vagrant/stopCavaDaemons.sh
+Icon=process-stop
+StartupNotify=false
+Terminal=true
+Categories=Utility;X-XFCE;X-Xfce-Toplevel;
+OnlyShowIn=XFCE;
+Name=Cava Shutdown
+Comment=Shutdown Cava System Instrumentation
+X-XFCE-Source=file:///usr/share/applications/xfce4-run.desktop
+Path=

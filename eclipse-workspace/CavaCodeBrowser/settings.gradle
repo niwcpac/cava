@@ -1,0 +1,2 @@
+include ':CavaListener'
+project(':CavaListener').projectDir = new File(settingsDir, '../CavaListener')

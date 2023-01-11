@@ -1,0 +1,17 @@
+#!/bin/sh
+
+#export DISPLAY=localhost:0.0
+# Turn off bell
+xset b off
+
+# Turn off screensaver
+xset s off
+
+# Turn off screen blanking
+xset s noblank
+
+# Turn off power management
+xset -dpms
+
+# Start XFCE Session
+. /etc/xdg/xfce4/xinitrc

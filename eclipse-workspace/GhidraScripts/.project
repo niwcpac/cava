@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>GhidraScripts</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>Ghidra</name>
+			<type>2</type>
+			<location>/home/vagrant/ghidra</location>
+		</link>
+		<link>
+			<name>Ghidra 8051 scripts</name>
+			<type>2</type>
+			<location>/home/vagrant/ghidra/Ghidra/Processors/8051/ghidra_scripts</location>
+		</link>
+		<link>
+			<name>Ghidra Atmel scripts</name>
+			<type>2</type>
+			<location>/home/vagrant/ghidra/Ghidra/Processors/Atmel/ghidra_scripts</location>
+		</link>
+		<link>
+			<name>Ghidra Base scripts</name>
+			<type>2</type>
+			<location>/home/vagrant/ghidra/Ghidra/Features/Base/ghidra_scripts</location>
+		</link>
+		<link>
+			<name>Ghidra BytePatterns scripts</name>
+			<type>2</type>
+			<location>/home/vagrant/ghidra/Ghidra/Features/BytePatterns/ghidra_scripts</location>
+		</link>
+		<link>
+			<name>Ghidra DATA scripts</name>
+			<type>2</type>
+			<location>/home/vagrant/ghidra/Ghidra/Processors/DATA/ghidra_scripts</location>
+		</link>
+		<link>
+			<name>Ghidra Debugger scripts</name>
+			<type>2</type>
+			<location>/home/vagrant/ghidra/Ghidra/Debug/Debugger/ghidra_scripts</location>
+		</link>
+		<link>
+			<name>Ghidra Debugger-agent-dbgmodel-traceloader scripts</name>
+			<type>2</type>
+			<location>/home/vagrant/ghidra/Ghidra/Debug/Debugger-agent-dbgmodel-traceloader/ghidra_scripts</location>
+		</link>
+		<link>
+			<name>Ghidra Debugger-agent-frida scripts</name>
+			<type>2</type>
+			<location>/home/vagrant/ghidra/Ghidra/Debug/Debugger-agent-frida/ghidra_scripts</location>
+		</link>
+		<link>
+			<name>Ghidra Decompiler scripts</name>
+			<type>2</type>
+			<location>/home/vagrant/ghidra/Ghidra/Features/Decompiler/ghidra_scripts</location>
+		</link>
+		<link>
+			<name>Ghidra FileFormats scripts</name>
+			<type>2</type>
+			<location>/home/vagrant/ghidra/Ghidra/Features/FileFormats/ghidra_scripts</location>
+		</link>
+		<link>
+			<name>Ghidra FunctionID scripts</name>
+			<type>2</type>
+			<location>/home/vagrant/ghidra/Ghidra/Features/FunctionID/ghidra_scripts</location>
+		</link>
+		<link>
+			<name>Ghidra GnuDemangler scripts</name>
+			<type>2</type>
+			<location>/home/vagrant/ghidra/Ghidra/Features/GnuDemangler/ghidra_scripts</location>
+		</link>
+		<link>
+			<name>Ghidra JVM scripts</name>
+			<type>2</type>
+			<location>/home/vagrant/ghidra/Ghidra/Processors/JVM/ghidra_scripts</location>
+		</link>
+		<link>
+			<name>Ghidra MicrosoftCodeAnalyzer scripts</name>
+			<type>2</type>
+			<location>/home/vagrant/ghidra/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts</location>
+		</link>
+		<link>
+			<name>Ghidra PDB scripts</name>
+			<type>2</type>
+			<location>/home/vagrant/ghidra/Ghidra/Features/PDB/ghidra_scripts</location>
+		</link>
+		<link>
+			<name>Ghidra PIC scripts</name>
+			<type>2</type>
+			<location>/home/vagrant/ghidra/Ghidra/Processors/PIC/ghidra_scripts</location>
+		</link>
+		<link>
+			<name>Ghidra Python scripts</name>
+			<type>2</type>
+			<location>/home/vagrant/ghidra/Ghidra/Features/Python/ghidra_scripts</location>
+		</link>
+		<link>
+			<name>Ghidra VersionTracking scripts</name>
+			<type>2</type>
+			<location>/home/vagrant/ghidra/Ghidra/Features/VersionTracking/ghidra_scripts</location>
+		</link>
+		<link>
+			<name>Home scripts</name>
+			<type>2</type>
+			<location>/home/vagrant/ghidra_scripts</location>
+		</link>
+	</linkedResources>
+</projectDescription>

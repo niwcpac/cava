@@ -1,0 +1,1 @@
+This directory contains sample programs that may be loaded into Ghidra.  Note that these programs must be manually added to a Ghidra project and are not automatically provisioned or loaded into a Ghidra project during provisioning.  Please see the section on `Changing an Experiment's Ghidra Project' in the cava-platform/README.md

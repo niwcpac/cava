@@ -1,0 +1,23 @@
+Instructions: 
+1. Use Ghidra's XREF feature to find the instruction referencing the string 'initializing database'.
+2. Enter the address of the instruction referencing the string and click the 'Enter response' button when you are ready to continue.
+**Scroll down only if you need interface or task hints.
+
+
+
+
+
+
+
+
+
+
+
+
+Hints:
+1. Use the 's' hotkey or 'Window->Defined Strings' to initiate a search for string values in the program.
+2. Use the 'Search Memory' or 'Defined Strings' tool interface to find the location of the string 'initializing database'.
+3. Scroll the Listing view to the right to show the XREFs for this string. 
+4. Double-click the address of the cross-reference.
+5. Enter the address 0x1191be in the 'Result' field and click the 'Enter response' button when you are ready to continue.
+6. The address labels in the XREF field in the Listing view can also be double clicked to navigate directly to the cross reference. 

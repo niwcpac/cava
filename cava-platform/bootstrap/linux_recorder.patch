@@ -1,0 +1,68 @@
+--- linux_recorder.py	2022-03-21 15:11:40.986156842 -0700
++++ /vagrant/linux_recorder_patched.py	2022-03-21 15:09:15.000000000 -0700
+@@ -307,11 +307,62 @@
+     65438: KeyboardKey.KEY_NUMPAD_0,
+     65439: KeyboardKey.KEY_NUMPAD_PERIOD,
+     65515: KeyboardKey.KEY_LEFT_WINDOWS,
+-    65516: KeyboardKey.KEY_RIGHT_WINDOWS
++    65516: KeyboardKey.KEY_RIGHT_WINDOWS,
++    # Patched entries
++    33: KeyboardKey.KEY_1,
++    34: KeyboardKey.KEY_APOSTROPHE,
++    35: KeyboardKey.KEY_3,
++    36: KeyboardKey.KEY_4,
++    37: KeyboardKey.KEY_5,
++    38: KeyboardKey.KEY_7,
++    40: KeyboardKey.KEY_9,
++    41: KeyboardKey.KEY_0,
++    42: KeyboardKey.KEY_8,
++    43: KeyboardKey.KEY_EQUALS,
++    58: KeyboardKey.KEY_SEMICOLON,
++    60: KeyboardKey.KEY_COMMA,
++    62: KeyboardKey.KEY_PERIOD,
++    63: KeyboardKey.KEY_SLASH,
++    64: KeyboardKey.KEY_2,
++    65: KeyboardKey.KEY_A,
++    66: KeyboardKey.KEY_B,
++    67: KeyboardKey.KEY_C,
++    68: KeyboardKey.KEY_D,
++    69: KeyboardKey.KEY_E,
++    70: KeyboardKey.KEY_F,
++    71: KeyboardKey.KEY_G,
++    72: KeyboardKey.KEY_H,
++    73: KeyboardKey.KEY_I,
++    74: KeyboardKey.KEY_J,
++    75: KeyboardKey.KEY_K,
++    76: KeyboardKey.KEY_L,
++    77: KeyboardKey.KEY_M,
++    78: KeyboardKey.KEY_N,
++    79: KeyboardKey.KEY_O,
++    80: KeyboardKey.KEY_P,
++    81: KeyboardKey.KEY_Q,
++    82: KeyboardKey.KEY_R,
++    83: KeyboardKey.KEY_S,
++    84: KeyboardKey.KEY_T,
++    85: KeyboardKey.KEY_U,
++    86: KeyboardKey.KEY_V,
++    87: KeyboardKey.KEY_W,
++    88: KeyboardKey.KEY_X,
++    89: KeyboardKey.KEY_Y,
++    90: KeyboardKey.KEY_Z,
++    94: KeyboardKey.KEY_6,
++    95: KeyboardKey.KEY_MINUS,
++    123: KeyboardKey.KEY_LEFT_BRACKET,
++    124: KeyboardKey.KEY_BACKSLASH,
++    125: KeyboardKey.KEY_RIGHT_BRACKET,
++    126: KeyboardKey.KEY_GRAVE,
++    65056: KeyboardKey.KEY_TAB,  
++    65511: KeyboardKey.KEY_LEFT_ALT,
++    65512: KeyboardKey.KEY_RIGHT_ALT
+ }
+ 
+ mouse_button_mapping = {
+     1 : MouseButton.LEFT,
+     2 : MouseButton.MIDDLE,
+     3 : MouseButton.RIGHT
+-}
+\ No newline at end of file
++}

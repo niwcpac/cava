@@ -1,0 +1,54 @@
+#!/bin/sh
+
+# Shell script for starting/stopping the KeyboardMouseListener  python script
+
+BINDIR="/opt/cava/"
+LOGDIR="/opt/cava-log/"
+DATAFILE="$LOGDIR/km_data.json"
+PIDFILE="/run/KeyboardMouseListener.pid"
+DAEMON="$BINDIR/KeyboardMouseListener.py"
+ARGS="-d"
+LOGFILE="$LOGDIR/KeyboardMouseListener.log"
+
+#export DISPLAY="localhost:0.0"
+#export DISPLAY="localhost:0.0"
+
+start() {
+    # Check if we are already started, do not start a second daemon
+    if [ -f $PIDFILE ]; then
+        PID=`cat $PIDFILE`
+        echo "KeyboardMouseListener already started with process ID $PID, not starting a new instance" >> $LOGFILE
+        exit
+    fi
+
+    # Exec process with the keyboard listener
+    #exec python3 $DAEMON #$ARGS
+    exec python3 $DAEMON
+
+    # Store the process ID and lock file for later use
+    #PID="$!" 
+    #echo $PID > $PIDFILE
+    #echo "KeyboardMouseListener started with PID $PID"
+}
+
+stop() {
+    if [ -f $PIDFILE ]; then
+        PID=`cat $PIDFILE`
+        echo "Killing KeyboardMouseListener script with PID $PID" >> $LOGFILE
+        kill -15 $PID
+	    sleep 1
+        # PID file is automatically removed by systemd
+        if [ -f $PIDFILE ]; then
+            rm $PIDFILE
+        fi
+    else
+        echo "PID file not found" >> $LOGFILE
+    fi
+
+
+}
+
+
+case $1 in
+    start|stop) "$1" ;;
+esac

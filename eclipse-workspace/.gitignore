@@ -1,0 +1,6 @@
+/.metadata/
+hs_err*
+*/.gradle
+*/build
+*/dist
+*/lib

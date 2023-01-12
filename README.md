@@ -10,11 +10,20 @@ The project consists of two principle components:
 
 ## Quickstart
 
-To run the experimental platform the plugins need to be built.  This requires building the plugins on a system with Java, Eclipse, Ghidra, and the GhidraDev plugin installed and working.  We provide a pre-built virtual machine to streamline plugin development.
+To run the CAVA experimental platform, CAVA's instrumented Ghidra plugins need to be built and installed in the platform.  This requires building the plugins on a system with Java, Eclipse, Ghidra, and the GhidraDev plugin installed and working.  We provide a pre-built virtual machine for the development environment to streamline plugin development.
+
+### Pre-requisites
+The pre-built development environment relies on use of Vagrant, VMWare, and the Vagrant VMWare Utility.  
+
+ 1. Vagrant: https://developer.hashicorp.com/vagrant/downloads
+ 2. VMWare Workstation Pro or VMWare Fusion: https://www.vmware.com/products/workstation-pro.html
+ 3. Vagrant VMWare Utility: https://developer.hashicorp.com/vagrant/downloads/vmware
+
+Note that VMWare Player will not work as it does not provide the API features used by Vagrant to manage virtual machine network interfaces. 
 
 ### Startup
 
- 1. Provision and start the development virtual machine: `vagrant up`
+ 1. Provision and start the development virtual machine, at the root of the repo: `vagrant up`
 
 ### Compiling Plugins:
 
@@ -212,4 +221,4 @@ After following these steps, your plugin should be available under `Window` head
 
 ## Collecting more data
 
-If your experiment has other data to collect and it is saved locally on the virtual machine, it is advised to modify the shell script under `cava-platform/bootstrap/saveCavaData.sh`. This script is ran automatically whenever the experiment platform is halted or destroyed.
+If your experiment has other data to collect and it is saved locally on the virtual machine, it is advised to modify the shell script under `cava-platform/bootstrap/saveCavaData.sh`. This script is run automatically whenever the experiment platform is halted or destroyed.

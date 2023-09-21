@@ -18,6 +18,7 @@ The pre-built development environment relies on use of Vagrant, VMWare, and the 
  1. Vagrant: https://developer.hashicorp.com/vagrant/downloads
  2. VMWare Workstation Pro or VMWare Fusion: https://www.vmware.com/products/workstation-pro.html
  3. Vagrant VMWare Utility: https://developer.hashicorp.com/vagrant/downloads/vmware
+ 4. Vagrant VMWare and Reload Plugins: `vagrant plugin install vagrant-vmware-desktop reload`
 
 Note that VMWare Player will not work as it does not provide the API features used by Vagrant to manage virtual machine network interfaces. 
 
